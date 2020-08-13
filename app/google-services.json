@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "379412839530",
+    "firebase_url": "https://exchange-rates-dd120.firebaseio.com",
+    "project_id": "exchange-rates-dd120",
+    "storage_bucket": "exchange-rates-dd120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379412839530:android:3b77d801f9c8d8371d9e13",
+        "android_client_info": {
+          "package_name": "elit.express.exchangerates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379412839530-2usbsgk113btit5m5iovsrihetls6gmu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "elit.express.exchangerates",
+            "certificate_hash": "71f6dac0fc090b134196778d81500972424c69b6"
+          }
+        },
+        {
+          "client_id": "379412839530-v63faiclhcuuu0nrkaupq54d2u4qe08r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFoWV3--AWnY4GJh04OkbsVHoa4OF5VHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379412839530-v63faiclhcuuu0nrkaupq54d2u4qe08r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

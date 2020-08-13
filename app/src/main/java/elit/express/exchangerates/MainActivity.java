@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if(isNetworkAvailable()) {
-            //Toast.makeText(this, "nice", Toast.LENGTH_LONG).show();
             Intent intent=new Intent("RatesActivity");
             startActivity(intent);
+            finish();
         }
         else {
             AlertDialog.Builder aBuilder = new AlertDialog.Builder(this);
