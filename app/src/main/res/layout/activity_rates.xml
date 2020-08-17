@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RatesActivity">
+    tools:context=".RatesActivity"
+    android:id="@+id/activity_rates">
 
     <ListView
         android:id="@+id/ratesListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"></ListView>
 </LinearLayout>

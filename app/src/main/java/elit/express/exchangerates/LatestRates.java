@@ -17,7 +17,16 @@ public class LatestRates {
     @SerializedName("rates")
     @Expose
     private Map<String,String> rates;
-    //private HashMap<String,String> rates;
+
+    private long timestamp=0;
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public String getBase() {
         return base;

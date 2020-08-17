@@ -36,4 +36,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 
+
+//    implementation 'com.google.firebase-auth:16.0.0'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+    implementation 'com.firebaseui:firebase-ui:0.6.2'
+
+//    implementation 'androidx.appcompat:appcompat:design:1.1.0'
+
 }
