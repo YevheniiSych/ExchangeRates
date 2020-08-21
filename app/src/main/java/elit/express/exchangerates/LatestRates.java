@@ -3,7 +3,6 @@ package elit.express.exchangerates;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -52,13 +51,6 @@ public class LatestRates {
         this.rates = rates;
     }
 
-//    public HashMap<String,String> getRates() {
-//        return rates;
-//    }
-//
-//    public void setRates(HashMap<String,String> rates) {
-//        this.rates = rates;
-//    }
 
     @Override
     public boolean equals(Object o) {

@@ -3,9 +3,9 @@ package elit.express.exchangerates;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class NetworkService {
-    private static NetworkService mInstance;
+class NetworkService {
     private static final String BASE_URL = "https://api.exchangeratesapi.io/";
+    private static NetworkService mInstance;
     private Retrofit mRetrofit;
 
     private NetworkService() {
@@ -15,14 +15,14 @@ public class NetworkService {
                 .build();
     }
 
-    public static NetworkService getInstance() {
+    static NetworkService getInstance() {
         if (mInstance == null) {
             mInstance = new NetworkService();
         }
         return mInstance;
     }
 
-    public JSONPlaceHolderApi getJSONApi() {
+    JSONPlaceHolderApi getJSONApi() {
         return mRetrofit.create(JSONPlaceHolderApi.class);
     }
 }

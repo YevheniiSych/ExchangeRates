@@ -4,4 +4,7 @@
     <string name="ok">OK</string>
     <string name="connectionError">Connection error!</string>
     <string name="checkInternet">Check your internet connection and try again</string>
+    <string name="noRates">No exchange rate data is available for the selected currency</string>
+    <string name="dbError">Impossible to read data from database</string>
+    <string name="webError">Impossible to read data from web-service</string>
 </resources>

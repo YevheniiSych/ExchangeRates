@@ -1,7 +1,5 @@
 package elit.express.exchangerates;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,8 +7,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,22 +17,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(isNetworkAvailable()) {
-            Intent intent=new Intent("RatesActivity");
+        //Check is network available
+        if (isNetworkAvailable()) {
+            Intent intent = new Intent("RatesActivity");
             startActivity(intent);
             finish();
-        }
-        else {
+        } else {
             AlertDialog.Builder aBuilder = new AlertDialog.Builder(this);
             aBuilder.setMessage(R.string.checkInternet)
                     .setCancelable(true)
                     .setNegativeButton(R.string.ok,
                             new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            finish();
-                        }
-                    });
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    finish();
+                                }
+                            });
             AlertDialog alert = aBuilder.create();
             alert.setTitle(R.string.connectionError);
             alert.show();
@@ -45,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         ConnectivityManager connectivity = (ConnectivityManager) this
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivity == null) {
-            Log.d("NetworkCheck", "isNetworkAvailable: No");
             return false;
         }
 
@@ -53,14 +50,11 @@ public class MainActivity extends AppCompatActivity {
         NetworkInfo[] info = connectivity.getAllNetworkInfo();
 
         // make sure that there is at least one interface to test against
-        if (info != null) {
-            // iterate through the interfaces
-            for (int i = 0; i < info.length; i++) {
-                // check this interface for a connected state
-                if (info[i].getState() == NetworkInfo.State.CONNECTED) {
-                    Log.d("NetworkCheck", "isNetworkAvailable: Yes");
-                    return true;
-                }
+        // iterate through the interfaces
+        for (NetworkInfo networkInfo : info) {
+            // check this interface for a connected state
+            if (networkInfo.getState() == NetworkInfo.State.CONNECTED) {
+                return true;
             }
         }
         return false;

@@ -4,10 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface JSONPlaceHolderApi {
-    @GET("/latest")
-    Call<LatestRates> getPostWithID(@Query("base") String base);
-
+public interface Rates7DaysI {
     @GET("/history")
     Call<Rates7Days> getPost(
             @Query("start_at") String start_at,
@@ -16,5 +13,4 @@ public interface JSONPlaceHolderApi {
             @Query("symbols") String symbols
     );
 }
-
 
